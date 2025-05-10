@@ -28,7 +28,7 @@ form {
 a {
   color: rgb(224, 114, 224);
 }
-.instruction {
+.instructions {
   padding: 16px;
   border: 1px solid rgb(80, 71, 71);
   width: 80%;
@@ -54,6 +54,9 @@ a {
   line-height: 2;
   border-left: 3px solid purple;
   box-shadow: 0px 4px 30px 0px rgb(219, 171, 171);
+}
+.poem strong {
+  color: rgb(224, 114, 224);
 }
 footer {
   text-align: center;
