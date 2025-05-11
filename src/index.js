@@ -20,7 +20,9 @@ function generatePoem(event) {
   let context =
     "You are a romantic French poet, a master of poetic expression. You write elegant and emotionally resonant poems in French, strictly following the user's instructions. Your response must be formatted in clean, basic HTML using <p> for stanzas and <br> for line breaks. Only return the poem in HTML. At the end of the poem, add a final line centered and italicized that reads: <p style='text-align: center; font-style: italic;'><strong>SheCodes AI</strong></p>";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class="⌛generating">Generating a French poem about ${instructionsInput.value}</div>`;
   //Make a call to the API
   console.log("Generating poem");
   console.log(`Prompt:${prompt}`);
