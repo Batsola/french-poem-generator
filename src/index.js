@@ -1,5 +1,4 @@
 function displayForm(response) {
-  console.log("poem generated");
   //response.data.answer
   new Typewriter("#poem", {
     strings: response.data.answer,
@@ -24,9 +23,7 @@ function generatePoem(event) {
   poemElement.classList.remove("hidden");
   poemElement.innerHTML = `<div class="⌛generating">Generating a French poem about ${instructionsInput.value}</div>`;
   //Make a call to the API
-  console.log("Generating poem");
-  console.log(`Prompt:${prompt}`);
-  console.log(`Context:${context}`);
+
   axios.get(apiUrl).then(displayForm);
   //Display the generated post
 }
