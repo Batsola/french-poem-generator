@@ -15,9 +15,9 @@ function generatePoem(event) {
 
   //build the API URL
   let apiKey = "0b94ffa0fbab4a7377346039a787t35o";
-  let prompt = `Write a French poem about ${instructionsInput.value}, in 3 stanzas of 4 lines each in basic HTML. Use poetic vocabulary, and a  rhymed structure.`;
+  let prompt = `Write a French poem about ${instructionsInput.value}, with one stanza (4 lines), in basic HTML. Use poetic vocabulary and rhyme. Do not include markdown or code block formatting.`;
   let context =
-    "You are a romantic French poet, a master of poetic expression. You write elegant and emotionally resonant poems in French, strictly following the user's instructions. Your response must be formatted in clean, basic HTML using <p> for stanzas and <br> for line breaks. At the end of the poem, add a final line centered and italicized that reads: <p style='text-align: center; font-style: italic;'><strong>SheCodes AI</strong></p>";
+    "You are a romantic French poet. Write an elegant, rhymed poem based on the user's input in French, formatted in simple HTML using <p> for stanza and <br> for line breaks. Add a final, centered, italicized line: <p style='text-align: center; font-style: italic;'><strong>SheCodes AI</strong></p>";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
